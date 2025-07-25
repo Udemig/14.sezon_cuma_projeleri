@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Shop Products Page</title>
+    <!-- * Global Css Link -->
+    <link rel="stylesheet" href="./styles/global.css" />
+    <!-- * Products Css Link -->
+    <link rel="stylesheet" href="./styles/products.css" />
+
+    <!-- * Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- * Header -->
+    <header>
+      <!-- Logo -->
+      <a href="#" class="logo">
+        <h1>E-Shop</h1>
+      </a>
+
+      <!-- Navigation -->
+      <nav>
+        <a href="/">Home</a>
+        <a href="/products.html">Products</a>
+        <a href="/about.html">About</a>
+        <a href="/contact.html">Contact</a>
+      </nav>
+
+      <!-- Buttons -->
+      <div class="buttons">
+        <!-- Menu Button -->
+        <button id="menu-btn">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <!-- Close Button -->
+        <button id="close-btn">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <!-- Search Button -->
+        <button>
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        <!-- Cart Button -->
+        <button id="cart-btn">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span>3</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- * Main -->
+    <main>
+      <!-- Filter -->
+      <aside class="filter-wrapper">
+        <!-- Title -->
+        <h2>Filters</h2>
+
+        <!-- Filter Section -->
+        <div class="filter-section">
+          <h3>Categories</h3>
+
+          <div class="filter-items">
+            <!-- Filter Item -->
+            <div class="filter-item">
+              <input type="checkbox" id="phone" />
+              <label for="phone">Phone</label>
+            </div>
+            <!-- Filter Item -->
+            <div class="filter-item">
+              <input type="checkbox" id="mouse" />
+              <label for="mouse">Mouse</label>
+            </div>
+            <!-- Filter Item -->
+            <div class="filter-item">
+              <input type="checkbox" id="pc" />
+              <label for="pc">Pc</label>
+            </div>
+            <!-- Filter Item -->
+            <div class="filter-item">
+              <input type="checkbox" id="headphones" />
+              <label for="headphones">Headphones</label>
+            </div>
+            <!-- Filter Item -->
+            <div class="filter-item">
+              <input type="checkbox" id="watches" />
+              <label for="watches">Watches</label>
+            </div>
+          </div>
+
+          <!-- Price -->
+          <div class="price-wrapper">
+            <h3>Price Range</h3>
+
+            <div class="price-range">
+              <input type="range" />
+
+              <div class="price-inputs">
+                <input type="number" placeholder="min" min="0" />
+                <input type="number" placeholder="max" max="100000" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Products Container -->
+      <section class="products-wrapper">
+        <!-- Header -->
+        <div class="product-header">
+          <!-- Title -->
+          <h2>All Products</h2>
+
+          <!-- Sort Options -->
+          <select>
+            <option selected disabled>Select Option</option>
+            <option>Newest First</option>
+            <option>Price: Low to High</option>
+            <option>Price: High to Low</option>
+            <option>Best Sellers</option>
+          </select>
+        </div>
+
+        <!-- Product Container -->
+        <div class="product-container">
+          <!-- Product Card-1 -->
+          <div class="product-card">
+            <!-- Image -->
+            <img src="./images/macbook.png" alt="product-image" />
+
+            <!-- Title -->
+            <h3>MacBook Pro 14"</h3>
+
+            <!-- Price -->
+            <p>$1,999.99</p>
+
+            <!-- Button -->
+            <button>Add to cart</button>
+          </div>
+          <!-- Product Card-2 -->
+          <div class="product-card">
+            <!-- Image -->
+            <img src="./images/samsung-tv.webp" alt="product-image" />
+
+            <!-- Title -->
+            <h3>Samsung QLED 4K TV</h3>
+
+            <!-- Price -->
+            <p>$1,299.99</p>
+
+            <!-- Button -->
+            <button>Add to cart</button>
+          </div>
+          <!-- Product Card-3 -->
+          <div class="product-card">
+            <!-- Image -->
+            <img src="./images/airpods-pro-2.jpeg" alt="product-image" />
+
+            <!-- Title -->
+            <h3>AirPods Pro 2nd Gen</h3>
+
+            <!-- Price -->
+            <p>$249.99</p>
+
+            <!-- Button -->
+            <button>Add to cart</button>
+          </div>
+          <!-- Product Card-4 -->
+          <div class="product-card">
+            <!-- Image -->
+            <img src="./images/apple-watch-8.avif" alt="product-image" />
+
+            <!-- Title -->
+            <h3>Apple Watch Series 8</h3>
+
+            <!-- Price -->
+            <p>$399.99</p>
+
+            <!-- Button -->
+            <button>Add to cart</button>
+          </div>
+          <!-- Product Card-5 -->
+          <div class="product-card">
+            <!-- Image -->
+            <img src="./images/coffee-marker.jpg" alt="product-image" />
+
+            <!-- Title -->
+            <h3>Breville Coffee Maker</h3>
+
+            <!-- Price -->
+            <p>$199.99</p>
+
+            <!-- Button -->
+            <button>Add to cart</button>
+          </div>
+          <!-- Product Card-6 -->
+          <div class="product-card">
+            <!-- Image -->
+            <img src="./images/roomba-i7+.webp" alt="product-image" />
+
+            <!-- Title -->
+            <h3>Roomba i7+</h3>
+
+            <!-- Price -->
+            <p>$799.99</p>
+
+            <!-- Button -->
+            <button>Add to cart</button>
+          </div>
+          <!-- Product Card-7 -->
+          <div class="product-card">
+            <!-- Image -->
+            <img
+              src="./images/logitech-g-pro-x-wireless.webp"
+              alt="product-image"
+            />
+
+            <!-- Title -->
+            <h3>Logitech G Pro X Wireless</h3>
+
+            <!-- Price -->
+            <p>$179.99</p>
+
+            <!-- Button -->
+            <button>Add to cart</button>
+          </div>
+          <!-- Product Card-8 -->
+          <div class="product-card">
+            <!-- Image -->
+            <img src="./images/razer-deathAdder-v2.webp" alt="product-image" />
+
+            <!-- Title -->
+            <h3>Razer DeathAdder V2</h3>
+
+            <!-- Price -->
+            <p>$69.99</p>
+
+            <!-- Button -->
+            <button>Add to cart</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- * Js Connection -->
+    <script src="./main.js"></script>
+  </body>
+</html>
