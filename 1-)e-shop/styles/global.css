@@ -193,6 +193,27 @@ footer .footer-top .footer-item .newsletter form button:hover {
   background-color: var(--primary-color);
 }
 
+/* * Hero */
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../images/hero-banner.jpg") center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--white);
+}
+.hero .hero-content {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+.hero .hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.hero .hero-content p {
+  font-size: 1.2rem;
+}
+
 /* Footer Bottom */
 
 footer .footer-bottom {
@@ -228,7 +249,26 @@ footer .footer-bottom .footer-bottom-links a:hover {
 }
 /* * Responsive Design */
 
+@media (max-width: 1200px) {
+  /* ! Contact  */
+  .contact-wrapper {
+    padding: 4rem 0 !important;
+  }
+  .contact-wrapper .container {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 1100px) {
+  /* ! About  */
+  .info .info-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
 @media (max-width: 768px) {
+  /* ! Global  */
   /* * Header */
   header .buttons #menu-btn {
     display: block;
@@ -246,11 +286,13 @@ footer .footer-bottom .footer-bottom-links a:hover {
   }
   header nav.active {
     display: flex;
+    background-color: white;
   }
   header.nav-active {
     box-shadow: unset !important;
   }
 
+  /* ! Home  */
   /* * Hero */
   .hero .hero-content h1 {
     font-size: 2.5rem !important;
@@ -260,5 +302,34 @@ footer .footer-bottom .footer-bottom-links a:hover {
   }
   .hero .hero-content button {
     font-size: 0.8rem !important;
+  }
+
+  /* ! Products  */
+  main {
+    grid-template-columns: 1fr !important;
+  }
+
+  main .filter-wrapper {
+    position: static !important;
+  }
+  main .products-wrapper .product-header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  main .products-wrapper .product-header select {
+    width: 100%;
+  }
+
+  /* ! About  */
+  .info-container .info-boxes {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* ! Contact  */
+  .map-section {
+    padding: 4rem 1rem !important;
+  }
+  .map-section .map-container {
+    width: 100% !important;
   }
 }

@@ -1,0 +1,148 @@
+/* * Root */
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #3498db;
+  --accent-color: #e74c3c;
+  --text-color: #333;
+  --light-bg: #f8f9fa;
+  --white: #ffffff;
+  --transition: all 0.3s ease;
+}
+
+/* * Hero */
+.contact-hero {
+  height: 600px;
+}
+
+/* * Contact Section */
+.contact-wrapper {
+  margin: 5rem 0;
+  padding: 4rem;
+  background-color: var(--light-bg);
+}
+
+.contact-wrapper .container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  padding: 0 5rem;
+}
+
+/* Information */
+.contact-wrapper .container .contact-information h2 {
+  color: var(--primary-color);
+  font-size: 2rem;
+  white-space: nowrap;
+  margin-bottom: 2rem;
+}
+
+.contact-wrapper .container .contact-information .information-box {
+  display: flex;
+  margin-bottom: 2rem;
+  gap: 0.25rem;
+}
+
+.contact-wrapper .container .contact-information .information-box i {
+  color: var(--secondary-color);
+  font-size: 1.5rem;
+  margin-top: 0.25rem;
+}
+.contact-wrapper .container .contact-information .information-box div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.contact-wrapper .container .contact-information .social-links {
+  display: flex;
+  gap: 1rem;
+}
+.contact-wrapper .container .contact-information .social-links a {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--white);
+  display: grid;
+  place-items: center;
+  color: var(--primary-color);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: var(--transition);
+}
+.contact-wrapper .container .contact-information .social-links a:hover {
+  background-color: var(--secondary-color);
+  color: var(--white);
+  transform: translateY(-5px);
+  font-size: 1.2rem;
+}
+
+/* Form */
+.contact-wrapper .container form {
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-wrapper .container form h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.contact-wrapper .container form .form-group label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+.contact-wrapper .container form .form-group {
+  margin-bottom: 1.5rem;
+}
+.contact-wrapper .container form .form-group :where(input, textarea) {
+  border: 1px solid #ddd;
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: var(--transition);
+}
+.contact-wrapper .container form .form-group :where(input, textarea):focus {
+  border-color: var(--secondary-color);
+}
+.contact-wrapper .container form .form-group textarea {
+  resize: none;
+  width: 100% !important;
+  height: 200px !important;
+}
+.contact-wrapper .container form button {
+  background-color: var(--secondary-color);
+  width: 100%;
+  padding: 1rem 2rem;
+  color: var(--white);
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: var(--transition);
+  cursor: pointer;
+}
+.contact-wrapper .container form button:hover {
+  background-color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+/* * Map */
+.map-section {
+  padding: 4rem;
+}
+.map-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+}
+.map-section .map-container {
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  width: 80%;
+  margin: auto;
+}
+.map-section .map-container .map {
+  width: 100%;
+}

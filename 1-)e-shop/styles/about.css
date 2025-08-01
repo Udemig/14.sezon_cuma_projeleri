@@ -1,0 +1,163 @@
+/* * Root */
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #3498db;
+  --accent-color: #e74c3c;
+  --text-color: #333;
+  --light-bg: #f8f9fa;
+  --white: #ffffff;
+  --transition: all 0.3s ease;
+}
+
+.section-title {
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+}
+
+/* * Hero */
+.about-hero {
+  height: 400px;
+}
+
+/* * Info */
+
+.info {
+  background-color: var(--light-bg);
+  padding: 4rem 0;
+  margin: 4rem 0;
+}
+.info-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 0 6rem;
+  gap: 4rem;
+  align-items: center;
+}
+
+/* Info Text */
+.info-container .info-text h2 {
+  color: var(--primary-color);
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.info-container .info-text p {
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+/* Info Boxes */
+
+.info-container .info-boxes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+.info-container .info-boxes .info-box {
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: var(--transition);
+}
+.info-container .info-boxes .info-box:hover {
+  transform: translateY(-5px);
+}
+
+.info-container .info-boxes .info-box i {
+  color: var(--secondary-color);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.info-container .info-boxes .info-box h3 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* * Team */
+.team {
+  padding: 4rem;
+}
+
+.team .cards-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+  place-items: center;
+}
+.team .cards-wrapper .card {
+  text-align: center;
+  transition: var(--transition);
+  cursor: pointer;
+}
+.team .cards-wrapper .card:hover {
+  transform: translateY(-10px);
+}
+.team .cards-wrapper .card img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.team .cards-wrapper .card h3 {
+  font-size: 1.8rem;
+}
+.team .cards-wrapper .card p {
+  color: var(--secondary-color);
+  font-size: 1rem;
+}
+
+/* * Reviews */
+.reviews {
+  padding: 4rem;
+  background-color: var(--light-bg);
+}
+
+.reviews .cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+.reviews .cards-container .review-card {
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.reviews .cards-container .review-card i {
+  color: var(--secondary-color);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.reviews .cards-container .review-card .review {
+  line-height: 1.6;
+  font-style: italic;
+}
+
+.reviews .cards-container .review-card .review-author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.reviews .cards-container .review-card .review-author img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.reviews .cards-container .review-card .review-author p {
+  color: var(--secondary-color);
+  font-size: 0.9rem;
+}
