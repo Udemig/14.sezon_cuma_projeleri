@@ -1,0 +1,92 @@
+@media (max-width: 1400px) {
+  .actions-section {
+    flex-direction: column;
+    gap: 100px !important;
+  }
+  .actions-section .info {
+    max-width: unset;
+    background-color: red;
+    /* todo: max-width sorunu çözülecek  */
+  }
+}
+@media (max-width: 1300px) {
+  #services {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center !important;
+  }
+  #services .service-info {
+    max-width: unset;
+  }
+}
+
+@media (max-width: 1000px) {
+  /* Header */
+  header #menu-btn {
+    display: block !important;
+  }
+  header nav {
+    display: none;
+  }
+
+  /* Nav elemanlarını js kısmından yönetebilmek için gerekli class */
+  .open-nav {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 75px;
+    right: 20px;
+    background-color: #323443;
+    padding: 20px;
+    border-radius: 20px;
+    transition: all 0.5s ease;
+  }
+
+  /* Hero */
+  #hero {
+    justify-content: center;
+  }
+  #hero .hero-content {
+    max-width: 400px;
+  }
+  #hero .hero-content .hero-button-wrapper {
+    justify-content: center;
+  }
+
+  /* Info Section */
+  #info-section .top-info {
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px 0;
+  }
+}
+
+@media (max-width: 800px) {
+  #services .windows {
+    grid-template-columns: 1fr;
+    place-items: center;
+  }
+  #services .windows .window {
+    width: 600px;
+  }
+}
+
+@media (max-width: 600px) {
+  #services .windows .window {
+    width: 400px;
+  }
+}
+
+@media (max-width: 680px) {
+  #arge-section .arge-cards .arge-card video {
+    width: 100%;
+  }
+}
+@media (max-width: 640px) {
+  footer .footer-links .footer-link form {
+    flex-direction: column;
+  }
+  footer .footer-links .footer-link form :where(input, button) {
+    width: 100%;
+  }
+}

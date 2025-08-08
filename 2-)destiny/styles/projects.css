@@ -1,0 +1,66 @@
+/* * Root */
+:root {
+  --green: #49fc05;
+  --white: #f5f5f5;
+  --gray: #cdcccc;
+  --black: #121212;
+}
+
+/* * Welcome */
+.welcome-section .welcome-title {
+  font-size: 56px;
+  max-width: 1300px;
+  padding: 75px;
+  /* Elemanın arka planına bir renk geçişi verdik */
+  background-image: linear-gradient(to left, #3ee5ec, #ee74e1);
+  /* Elemanın arka planına verilen renk geçişini yazılara aktarma */
+  -webkit-background-clip: text;
+  /* Elemanın yazı rengini arkaplanla aynı yap */
+  -webkit-text-fill-color: transparent;
+}
+
+/* * Actions */
+.actions-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.actions-section .info {
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.actions-section .info h1 {
+  font-size: 35px;
+}
+.actions-section .info p {
+  line-height: 1.8;
+  font-size: 16px;
+  color: var(--gray);
+}
+
+.actions-section .cards {
+  display: flex;
+
+  gap: 50px;
+}
+.actions-section .cards .card {
+  background-color: #323443;
+  min-width: 200px;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+  align-items: center;
+  padding: 30px 20px;
+  border-radius: 10px;
+  position: relative;
+}
+.actions-section .cards .card img {
+  width: 50px;
+  position: absolute;
+  top: -50px;
+}
