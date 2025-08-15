@@ -43,7 +43,6 @@
 
 .actions-section .cards {
   display: flex;
-
   gap: 50px;
 }
 .actions-section .cards .card {
@@ -63,4 +62,60 @@
   width: 50px;
   position: absolute;
   top: -50px;
+}
+
+/* * Projects */
+.projects-section .title {
+  font-size: 40px;
+  margin: 30px 0;
+}
+.projects-section .project-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.projects-section .project-cards .project-card {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.projects-section .project-cards .project-card .card-image {
+  background-color: #323443;
+  padding: 40px 60px 0;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.projects-section .project-cards .project-card .card-image:hover {
+  background: linear-gradient(45deg, #c899ff 0%, #43dce7 52%, #49f5a2 90%);
+}
+.projects-section .project-cards .project-card .card-image .arrow-icon {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  background-color: #414141;
+  display: grid;
+  place-items: center;
+}
+
+.projects-section .project-cards .project-card .project-info {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 700px;
+}
+
+.projects-section .project-cards .project-card .project-info h4 {
+  font-size: 15px;
+}
+
+.projects-section .project-cards .project-card .project-info h1 {
+  font-size: 40px;
+}
+
+.projects-section .project-cards .project-card .project-info p {
+  color: var(--gray);
+  line-height: 1.6;
+  font-size: 17px;
+  letter-spacing: 1px;
 }
