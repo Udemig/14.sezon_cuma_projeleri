@@ -1,0 +1,167 @@
+@use "../base/variable";
+@use "../base/mixin";
+
+// Hero
+.experience-hero {
+  background-color: variable.$color-light-pink;
+  padding: variable.$space-xl variable.$space-lg;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: variable.$space-md;
+
+  h1 {
+    font-size: 2.5rem;
+    white-space: nowrap;
+
+    @include mixin.mobile {
+      font-size: 1.5rem;
+    }
+  }
+
+  p {
+    color: variable.$color-light-gray;
+    font-size: variable.$font-md;
+    line-height: variable.$space-lg;
+  }
+}
+
+// Filter
+.experience-filter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: variable.$space-md;
+  padding: variable.$space-sm variable.$space-lg;
+  flex-wrap: wrap;
+
+  // Button
+  button {
+    background-color: variable.$color-white;
+    padding: variable.$space-sm variable.$space-md;
+    border: 1px solid variable.$color-border;
+    border-radius: variable.$radius-full;
+    font-size: variable.$font-sm;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #f7f7f7;
+    }
+  }
+}
+
+// Story
+.experience-story {
+  display: flex;
+  align-items: center;
+  gap: variable.$space-lg;
+  padding: variable.$space-lg;
+  flex-wrap: wrap;
+  margin: variable.$space-md auto;
+  width: 90%;
+
+  @include mixin.tablet {
+    flex-direction: column;
+    width: 100% !important;
+  }
+
+  // Text
+  .story-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: variable.$space-md;
+
+    h2 {
+      white-space: nowrap;
+      font-size: variable.$font-lg;
+      @include mixin.mobile {
+        font-size: 1.25rem;
+      }
+    }
+
+    p {
+      font-size: variable.$font-md;
+      line-height: 1.6;
+      color: variable.$color-light-gray;
+    }
+  }
+
+  // Image
+  .story-image {
+    flex: 1;
+
+    img {
+      width: 100%;
+      aspect-ratio: 1;
+      max-width: 400px;
+      border-radius: variable.$radius-md;
+      object-fit: cover;
+    }
+  }
+}
+
+// Reviews
+.experience-reviews {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: variable.$space-lg;
+
+  margin: variable.$space-lg auto;
+  padding: variable.$space-lg variable.$space-md;
+
+  // Card
+  .review-card {
+    display: flex;
+    gap: variable.$space-md;
+    border: 1px solid variable.$color-border;
+    padding: variable.$space-md;
+    box-shadow: variable.$shadow-sm;
+    border-radius: variable.$radius-md;
+    transition: variable.$transition;
+    cursor: pointer;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    // Image
+    img {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    // Content
+    .review-content {
+      display: flex;
+      flex-direction: column;
+      gap: variable.$space-sm;
+
+      // Name
+      h3 {
+        font-size: variable.$font-md;
+        font-weight: 600;
+      }
+
+      // Location
+      .location {
+        color: variable.$color-light-gray;
+        font-size: variable.$font-sm;
+      }
+
+      // Review
+      .review {
+        font-size: variable.$font-md;
+      }
+      // Rating
+      .rating {
+        font-size: variable.$font-md;
+        i {
+          color: variable.$color-pink;
+        }
+      }
+    }
+  }
+}

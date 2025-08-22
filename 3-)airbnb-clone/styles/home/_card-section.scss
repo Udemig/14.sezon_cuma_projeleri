@@ -1,0 +1,113 @@
+@use "../base/variable";
+
+.cards-section {
+  padding: variable.$space-lg variable.$space-lg;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: variable.$space-lg;
+
+  // Card
+  .card {
+    display: flex;
+    flex-direction: column;
+    gap: variable.$space-sm;
+    cursor: pointer;
+
+    // Image
+    &-image {
+      position: relative;
+      width: 100%;
+      border-radius: variable.$radius-md;
+      overflow: hidden;
+
+      &:hover img {
+        scale: 1.03;
+      }
+
+      img {
+        width: 100%;
+        aspect-ratio: 4/3; // aspect-ratio bir elemanın genişlik yükseklik oranını belirlemek için kullanılır.Bu örnekte genişlik 4x ise yükseklik 3x olacaktır.
+        object-fit: cover;
+        border-radius: variable.$radius-md;
+        transition: variable.$transition;
+      }
+
+      // Label
+      .favorite-label {
+        position: absolute;
+        top: variable.$space-sm;
+        left: variable.$space-md;
+        background-color: variable.$color-white;
+        font-size: variable.$font-sm;
+        padding: variable.$space-xs variable.$space-sm;
+        border-radius: variable.$radius-full;
+        box-shadow: variable.$shadow-sm;
+      }
+
+      // Favorite Button
+      .favorite-button {
+        position: absolute;
+        top: variable.$space-sm;
+        right: variable.$space-sm;
+        background: none;
+        cursor: pointer;
+        font-size: 1.2rem;
+        color: variable.$color-light-gray;
+      }
+    }
+
+    // Content
+    &-content {
+      display: flex;
+      flex-direction: column;
+      gap: variable.$space-md;
+
+      // Header
+      .card-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: variable.$space-sm;
+
+        // h3
+        h3 {
+          font-size: variable.$font-md;
+          font-weight: 600;
+          color: variable.$color-dark-gray;
+          white-space: nowrap;
+        }
+
+        // rating
+        .rating {
+          display: flex;
+          align-items: center;
+          gap: variable.$space-xs;
+          font-size: variable.$font-md;
+
+          i {
+          }
+          span {
+            font-weight: 500;
+          }
+        }
+      }
+
+      // Distance
+      .distance {
+        color: variable.$color-light-gray;
+        font-size: variable.$font-md;
+      }
+
+      // Dates
+      .dates {
+        font-size: variable.$font-sm;
+      }
+
+      // Price
+      .price {
+        font-size: variable.$font-md;
+        color: variable.$color-dark-gray;
+      }
+    }
+  }
+}

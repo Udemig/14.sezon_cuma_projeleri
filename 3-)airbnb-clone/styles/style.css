@@ -89,6 +89,412 @@ header .right .btn:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.425);
 }
 
+footer {
+  border-top: 1px solid #ddd;
+  padding: 2rem;
+}
+footer .ideas {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 2rem;
+}
+footer .ideas h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+footer .ideas nav {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding-bottom: 1rem;
+}
+footer .ideas nav li a {
+  color: #444;
+  font-size: 1rem;
+}
+footer .ideas nav li a[aria-current=page] {
+  border-bottom: 2px solid #444;
+  padding-bottom: 0.3rem;
+}
+footer .ideas div {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+footer .ideas div article h5 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+}
+footer .ideas div article p {
+  font-size: 0.85rem;
+  color: #777;
+}
+footer .ideas .more-button {
+  background: none;
+  color: #444;
+  font-size: 1rem;
+  margin-top: 2rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+footer .footer-links-wrapper {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 1rem;
+}
+@media (max-width: 768px) {
+  footer .footer-links-wrapper {
+    padding: 0.6rem;
+  }
+}
+footer .footer-links-wrapper .footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+footer .footer-links-wrapper .footer-links h2 {
+  font-size: 1rem;
+  font-weight: 700;
+}
+footer .footer-links-wrapper .footer-links ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+footer .footer-links-wrapper .footer-links ul a {
+  color: #444;
+  font-size: 0.9rem;
+  transition: all 0.4s ease-in-out;
+}
+footer .footer-links-wrapper .footer-links ul a:hover {
+  text-decoration: underline;
+}
+footer .copyright {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #ddd;
+  padding-top: 1rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+footer .copyright-left {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+footer .copyright-left p {
+  font-size: 1rem;
+}
+footer .copyright-left ul {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+footer .copyright-left ul a {
+  font-size: 0.85rem;
+  color: #444;
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+}
+footer .copyright-left ul a:hover {
+  text-decoration: underline;
+}
+footer .copyright-right {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+footer .copyright-right ul {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+footer .copyright-right ul a {
+  color: #444;
+  font-size: 1rem;
+  transition: all 0.4s ease-in-out;
+}
+footer .copyright-right ul a:hover {
+  color: #e15d60;
+}
+
+.filter-section {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  overflow: auto;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #ddd;
+}
+.filter-section::-webkit-scrollbar {
+  display: none;
+}
+.filter-section .filter-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.85rem;
+  color: #777;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.4s ease-in-out;
+}
+.filter-section .filter-item i {
+  font-size: 1.5rem;
+  margin: 0.3rem;
+}
+.filter-section .filter-item:hover {
+  color: #000;
+  font-weight: 700;
+}
+.filter-section .filter-button {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  border: 1px solid #ddd;
+  padding: 0.6rem 1rem;
+  border-radius: 0.85rem;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+.filter-section .filter-button:hover {
+  background-color: #f7f7f7;
+}
+
+.cards-section {
+  padding: 2rem 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+.cards-section .card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  cursor: pointer;
+}
+.cards-section .card-image {
+  position: relative;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.cards-section .card-image:hover img {
+  scale: 1.03;
+}
+.cards-section .card-image img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 12px;
+  transition: all 0.4s ease-in-out;
+}
+.cards-section .card-image .favorite-label {
+  position: absolute;
+  top: 0.6rem;
+  left: 1rem;
+  background-color: #fff;
+  font-size: 0.85rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 999px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+.cards-section .card-image .favorite-button {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.6rem;
+  background: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #777;
+}
+.cards-section .card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.cards-section .card-content .card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+}
+.cards-section .card-content .card-header h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #444;
+  white-space: nowrap;
+}
+.cards-section .card-content .card-header .rating {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 1rem;
+}
+.cards-section .card-content .card-header .rating span {
+  font-weight: 500;
+}
+.cards-section .card-content .distance {
+  color: #777;
+  font-size: 1rem;
+}
+.cards-section .card-content .dates {
+  font-size: 0.85rem;
+}
+.cards-section .card-content .price {
+  font-size: 1rem;
+  color: #444;
+}
+
+.experience-hero {
+  background-color: #fef0f0;
+  padding: 4rem 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.experience-hero h1 {
+  font-size: 2.5rem;
+  white-space: nowrap;
+}
+@media (max-width: 576px) {
+  .experience-hero h1 {
+    font-size: 1.5rem;
+  }
+}
+.experience-hero p {
+  color: #777;
+  font-size: 1rem;
+  line-height: 2rem;
+}
+
+.experience-filter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.6rem 2rem;
+  flex-wrap: wrap;
+}
+.experience-filter button {
+  background-color: #fff;
+  padding: 0.6rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+.experience-filter button:hover {
+  background-color: #f7f7f7;
+}
+
+.experience-story {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  flex-wrap: wrap;
+  margin: 1rem auto;
+  width: 90%;
+}
+@media (max-width: 768px) {
+  .experience-story {
+    flex-direction: column;
+    width: 100% !important;
+  }
+}
+.experience-story .story-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.experience-story .story-text h2 {
+  white-space: nowrap;
+  font-size: 1.5rem;
+}
+@media (max-width: 576px) {
+  .experience-story .story-text h2 {
+    font-size: 1.25rem;
+  }
+}
+.experience-story .story-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #777;
+}
+.experience-story .story-image {
+  flex: 1;
+}
+.experience-story .story-image img {
+  width: 100%;
+  aspect-ratio: 1;
+  max-width: 400px;
+  border-radius: 12px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.experience-reviews {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin: 2rem auto;
+  padding: 2rem 1rem;
+}
+.experience-reviews .review-card {
+  display: flex;
+  gap: 1rem;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+}
+.experience-reviews .review-card:hover {
+  transform: translateY(-5px);
+}
+.experience-reviews .review-card img {
+  width: 60px;
+  height: 60px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+.experience-reviews .review-card .review-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.experience-reviews .review-card .review-content h3 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+.experience-reviews .review-card .review-content .location {
+  color: #777;
+  font-size: 0.85rem;
+}
+.experience-reviews .review-card .review-content .review {
+  font-size: 1rem;
+}
+.experience-reviews .review-card .review-content .rating {
+  font-size: 1rem;
+}
+.experience-reviews .review-card .review-content .rating i {
+  color: #e15d60;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   background-color: #fff;
