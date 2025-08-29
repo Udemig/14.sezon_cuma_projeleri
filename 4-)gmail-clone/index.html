@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gmail Clone-14Cuma Projeleri</title>
+    <!-- * Css Link -->
+    <link rel="stylesheet" href="./styles/style.css" />
+    <!-- * Bs Icons CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body>
+    <!-- * Header -->
+    <header>
+      <!-- * Logo && Menu Icon -->
+      <div class="header-left">
+        <!-- Menu Button -->
+        <button id="menu-btn">
+          <i class="bi bi-list"></i>
+        </button>
+
+        <!-- Logo -->
+        <div class="logo">
+          <img src="./images/logo-24.png" alt="logo-image" />
+          <span>Gmail</span>
+        </div>
+      </div>
+
+      <!-- * Search Form -->
+      <form class="search-form">
+        <!-- Search Button -->
+        <button type="submit">
+          <i class="bi bi-search"></i>
+        </button>
+
+        <!-- Input -->
+        <input type="search" placeholder="Postalarda arayınız ..." />
+
+        <!-- Settings Button -->
+        <button><i class="bi bi-sliders2"></i></button>
+      </form>
+
+      <!-- * Profile Image && Icons -->
+      <div class="header-icons">
+        <i class="bi bi-question-circle"></i>
+        <i class="bi bi-gear"></i>
+        <i class="bi bi-grid-3x3-gap-fill"></i>
+        <img src="./images/man.jpg" class="user-image" alt="user-image" />
+      </div>
+
+      <!--  -->
+    </header>
+
+    <!-- * Main -->
+    <main>
+      <!-- Left Aside -->
+      <aside class="left-aside">
+        <!-- Create Button -->
+        <button class="create">
+          <i class="bi bi-pencil-fill"></i>
+          <span>Oluştur</span>
+        </button>
+
+        <!-- Navigation -->
+        <nav>
+          <!-- Navigation Item -->
+
+          <a href="#" class="active">
+            <i class="bi bi-inbox-fill"></i>
+            <span>Gelen Kutusu</span>
+          </a>
+          <!-- Navigation Item -->
+          <a href="#">
+            <i class="bi bi-star"></i>
+            <span>Yıldızlananlar</span>
+          </a>
+          <!-- Navigation Item -->
+          <a href="#">
+            <i class="bi bi-clock"></i>
+            <span>Ertelenenler</span>
+          </a>
+          <!-- Navigation Item -->
+          <a href="#">
+            <i class="bi bi-send"></i>
+            <span>Gönderilmiş Postalar</span>
+          </a>
+          <!-- Navigation Item -->
+          <a href="#">
+            <i class="bi bi-file-earmark"></i>
+            <span>Taslaklar</span>
+          </a>
+          <!-- Navigation Item -->
+          <a href="#">
+            <i class="bi bi-caret-down-fill"></i>
+            <span>Diğer</span>
+          </a>
+        </nav>
+      </aside>
+      <!-- Center -->
+      <section class="center">
+        <!-- Top -->
+        <div class="center-top">
+          <!-- Left -->
+          <div class="center-top-left">
+            <div class="checkbox">
+              <!-- Checkbox -->
+              <input type="checkbox" />
+
+              <!-- Down Icon -->
+              <i class="bi bi-caret-down"></i>
+            </div>
+
+            <!-- Refresh Icon -->
+            <i class="bi bi-arrow-clockwise md-none"></i>
+
+            <!-- Dots Icon -->
+            <i class="bi bi-three-dots-vertical md-none"></i>
+          </div>
+
+          <!-- Right -->
+          <div class="center-top-right">
+            <!-- Line Info -->
+            <p>3 satırdan 1-3 arası</p>
+
+            <!-- Left Icon -->
+            <i class="bi bi-caret-left md-none"></i>
+
+            <!-- Right Icon -->
+            <i class="bi bi-caret-right-fill md-none"></i>
+
+            <!-- Keyboard && Down Icon -->
+            <div class="keyboard">
+              <i class="bi bi-keyboard-fill"></i>
+
+              <i class="bi bi-caret-down-fill"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mails Area -->
+        <div class="mails-area">
+          <h1>Mails Area</h1>
+        </div>
+      </section>
+      <!-- Right Aside -->
+      <aside class="right-aside">
+        <h1>Right</h1>
+      </aside>
+    </main>
+
+    <!-- * Modal -->
+    <!-- * Js Bağlantı -->
+    <script src="./js/main.js" type="module"></script>
+  </body>
+</html>

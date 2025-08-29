@@ -1,0 +1,62 @@
+@use "../base/global-style" as gb;
+@use "../base/variables" as v;
+@use "../base/mixin" as mx;
+
+.left-aside {
+  padding: 15px;
+
+  i {
+    font-size: 20px;
+  }
+
+  span {
+    font-weight: 500;
+    @include mx.lg {
+      display: none;
+    }
+  }
+  // Create
+  .create {
+    background-color: v.$create-color;
+    padding: 15px 30px;
+    @include gb.flexBox;
+    gap: 10px;
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: 500;
+    width: 100%;
+    transition: all 0.4s ease;
+
+    &:hover {
+      box-shadow: 2px 2px 10px gray;
+    }
+  }
+
+  // Nav
+
+  nav {
+    @include gb.flexBox;
+    align-items: unset;
+    flex-direction: column;
+    gap: 5px;
+    margin: 20px 0;
+
+    .active {
+      background-color: v.$active-color;
+      font-weight: bolder;
+    }
+
+    a {
+      color: v.$black-color;
+      white-space: nowrap;
+      @include gb.flexBox;
+      gap: 10px;
+      padding: 7px 12px 7px 26px;
+      border-radius: 0 20px 20px 0;
+
+      &:hover {
+        background-color: v.$hover-effect;
+      }
+    }
+  }
+}

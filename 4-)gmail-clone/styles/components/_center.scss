@@ -1,0 +1,65 @@
+@use "../base/variables" as v;
+@use "../base/mixin" as mx;
+@use "../base/global-style" as gb;
+
+.center {
+  background-color: v.$mails-background;
+  border-radius: 8px;
+
+  // Icon
+  i {
+    @include gb.icon;
+    width: 20px;
+    height: 20px;
+    font-size: 15px;
+    display: grid;
+    place-items: center;
+  }
+
+  .md-none {
+    @include mx.md {
+      display: none;
+    }
+  }
+
+  // Top
+  &-top {
+    @include gb.flexBox;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 15px 30px;
+
+    // Left
+    &-left {
+      @include gb.flexBox;
+      gap: 25px;
+
+      // Checkbox
+      .checkbox {
+        @include gb.flexBox;
+        gap: 15px;
+      }
+    }
+
+    // Right
+    &-right {
+      @include gb.flexBox;
+      gap: 20px;
+
+      p {
+        font-size: 15px;
+        white-space: nowrap;
+        @include mx.sm {
+          display: none;
+        }
+      }
+
+      .keyboard {
+        @include gb.flexBox;
+        gap: 10px;
+      }
+    }
+  }
+
+  // Mails Area
+}

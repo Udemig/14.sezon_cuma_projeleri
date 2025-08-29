@@ -1,0 +1,27 @@
+// Scss Imports
+@use "./base/reset";
+@use "./base/variables" as v;
+
+@use "./components/header";
+@use "./components/left-aside";
+@use "./components/center";
+@use "./components/right-aside";
+
+// Google Fonts
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+// Global Styles
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: v.$nav-background;
+}
+
+main {
+  height: calc(100vh - 90px);
+  display: grid;
+  grid-template-columns: auto 5fr 0.5fr;
+
+  @media (max-width: 1000px) {
+    grid-template-columns: auto 5fr;
+  }
+}

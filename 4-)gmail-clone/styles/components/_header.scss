@@ -1,0 +1,99 @@
+@use "../base/global-style" as gb;
+@use "../base/variables" as v;
+@use "../base/mixin" as m;
+
+header {
+  @include gb.flexBox;
+  justify-content: space-between;
+  padding: 20px;
+  height: 90px;
+  gap: 20px;
+
+  // Left
+  .header-left {
+    @include gb.flexBox;
+    gap: 10px;
+
+    // Menu Button
+    #menu-btn {
+      @include gb.icon;
+    }
+
+    // Logo
+    .logo {
+      @include gb.flexBox;
+      gap: 10px;
+      // Span
+      span {
+        font-size: 20px;
+        font-weight: 400;
+        @include m.lg {
+          display: none;
+        }
+      }
+    }
+  }
+
+  // Form
+  .search-form {
+    @include gb.flexBox;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 700px;
+    background-color: v.$search-input;
+    border-radius: 30px;
+    padding: 10px 25px;
+    @include m.md {
+      max-width: 300px;
+    }
+    @include m.sm {
+      max-width: 200px;
+    }
+
+    // Search && Settings Button
+    button {
+      @include gb.icon;
+      font-size: 20px;
+      @include m.md {
+        width: 10px;
+        height: 10px;
+        font-size: 15px;
+      }
+
+      @include m.sm {
+        display: none !important;
+      }
+    }
+
+    // Input
+    input {
+      flex: 1;
+      background: transparent;
+      font-size: 18px;
+    }
+  }
+
+  // Right
+  .header-icons {
+    @include gb.flexBox;
+    gap: 15px;
+
+    i {
+      @include gb.icon;
+
+      @include m.lg {
+        font-size: 20px;
+      }
+      @include m.md {
+        display: none;
+      }
+    }
+
+    .user-image {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+    }
+  }
+}
