@@ -1,0 +1,89 @@
+@use "../base/variable" as v;
+@use "../base/mixin";
+
+.rent-history {
+  padding: v.$space-lg v.$space-md;
+
+  // Title
+  &-title {
+    font-size: v.$font-lg;
+    margin-bottom: v.$space-lg;
+    font-weight: 600;
+  }
+
+  // Wrapper
+  &-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: v.$space-md;
+  }
+  // Card
+
+  &-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: v.$space-md;
+    border: 1px solid v.$color-border;
+    border-radius: v.$radius-md;
+    box-shadow: v.$shadow-sm;
+    @include mixin.xs-mobile {
+      padding: v.$space-sm v.$space-xs;
+    }
+
+    // Left Area
+    .left-area {
+      display: flex;
+      align-items: center;
+      gap: v.$space-lg;
+      @include mixin.xs-mobile {
+        gap: v.$space-sm;
+      }
+
+      // Image
+      img {
+        width: 120px;
+        height: 45px;
+        border-radius: v.$radius-md;
+
+        @include mixin.xs-mobile {
+          width: 150px;
+          height: 80px;
+        }
+      }
+
+      // Content
+      .content {
+        // Title
+        h4 {
+          font-size: v.$font-md;
+          margin-bottom: v.$space-sm;
+        }
+
+        // Dates
+        p {
+          color: v.$color-light-gray;
+        }
+      }
+    }
+
+    // Status
+    .status {
+      font-size: v.$font-sm;
+      padding: v.$space-xs v.$space-sm;
+      border-radius: v.$radius-full;
+      font-weight: 600;
+      white-space: nowrap;
+
+      &.complated {
+        background-color: #e7f9f1;
+        color: #2e8b58;
+      }
+
+      &.cancelled {
+        background-color: #fbeaea;
+        color: #c8534a;
+      }
+    }
+  }
+}

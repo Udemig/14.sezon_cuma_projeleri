@@ -1,0 +1,51 @@
+@use "../base/variable";
+@use "../base/mixin";
+
+.profile-section {
+  padding: variable.$space-lg variable.$space-md;
+  display: flex;
+  align-items: center;
+  gap: variable.$space-lg;
+
+  @include mixin.tablet {
+    justify-content: center;
+    text-align: center;
+  }
+
+  // Image
+  .profile-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  // Info
+  .profile-info {
+    display: flex;
+    flex-direction: column;
+    gap: variable.$space-md;
+
+    // Title
+    h2 {
+      font-size: variable.$font-lg;
+      font-weight: 700;
+    }
+    // Phone && Email
+    p {
+      font-size: variable.$font-md;
+      color: variable.$color-light-gray;
+    }
+
+    button {
+      @include mixin.button;
+      padding: variable.$space-sm variable.$space-md;
+      font-size: variable.$font-sm;
+      font-weight: 700;
+
+      &:hover {
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.745);
+      }
+    }
+  }
+}

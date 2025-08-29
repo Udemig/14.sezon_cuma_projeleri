@@ -1,3 +1,4 @@
+@use "./variable";
 @mixin desktop {
   @media (max-width: 1200px) {
     @content;
@@ -19,4 +20,21 @@
   @media (max-width: 576px) {
     @content;
   }
+}
+@mixin xs-mobile {
+  @media (max-width: 400px) {
+    @content;
+  }
+}
+
+// Button
+
+@mixin button {
+  background-color: #fb385c;
+  color: variable.$color-white;
+  padding: variable.$space-sm variable.$space-lg;
+  border-radius: variable.$radius-md;
+  font-size: variable.$font-md;
+  cursor: pointer;
+  transition: variable.$transition;
 }

@@ -165,3 +165,30 @@
     }
   }
 }
+
+// Share Experience
+.share-experience {
+  background-color: variable.$color-light-pink;
+  padding: variable.$space-xl variable.$space-lg;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: variable.$space-md;
+  // Title
+  h2 {
+    font-size: 2rem;
+  }
+  // Description
+  p {
+    font-size: variable.$font-md;
+  }
+
+  // Button
+  button {
+    @include mixin.button;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

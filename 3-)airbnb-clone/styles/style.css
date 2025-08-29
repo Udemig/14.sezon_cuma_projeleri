@@ -495,6 +495,152 @@ footer .copyright-right ul a:hover {
   color: #e15d60;
 }
 
+.share-experience {
+  background-color: #fef0f0;
+  padding: 4rem 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.share-experience h2 {
+  font-size: 2rem;
+}
+.share-experience p {
+  font-size: 1rem;
+}
+.share-experience button {
+  background-color: #fb385c;
+  color: #fff;
+  padding: 0.6rem 2rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+.share-experience button:hover {
+  opacity: 0.8;
+}
+
+.profile-section {
+  padding: 2rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+@media (max-width: 768px) {
+  .profile-section {
+    justify-content: center;
+    text-align: center;
+  }
+}
+.profile-section .profile-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.profile-section .profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.profile-section .profile-info h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.profile-section .profile-info p {
+  font-size: 1rem;
+  color: #777;
+}
+.profile-section .profile-info button {
+  background-color: #fb385c;
+  color: #fff;
+  padding: 0.6rem 2rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+  padding: 0.6rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+.profile-section .profile-info button:hover {
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.745);
+}
+
+.rent-history {
+  padding: 2rem 1rem;
+}
+.rent-history-title {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+.rent-history-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.rent-history-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+@media (max-width: 400px) {
+  .rent-history-card {
+    padding: 0.6rem 0.3rem;
+  }
+}
+.rent-history-card .left-area {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+@media (max-width: 400px) {
+  .rent-history-card .left-area {
+    gap: 0.6rem;
+  }
+}
+.rent-history-card .left-area img {
+  width: 120px;
+  height: 45px;
+  border-radius: 12px;
+}
+@media (max-width: 400px) {
+  .rent-history-card .left-area img {
+    width: 150px;
+    height: 80px;
+  }
+}
+.rent-history-card .left-area .content h4 {
+  font-size: 1rem;
+  margin-bottom: 0.6rem;
+}
+.rent-history-card .left-area .content p {
+  color: #777;
+}
+.rent-history-card .status {
+  font-size: 0.85rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 999px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.rent-history-card .status.complated {
+  background-color: #e7f9f1;
+  color: #2e8b58;
+}
+.rent-history-card .status.cancelled {
+  background-color: #fbeaea;
+  color: #c8534a;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   background-color: #fff;
