@@ -1,6 +1,21 @@
+@use "../base/global-style" as gb;
+
+
 .right-aside {
-  background-color: tomato;
-  @media (max-width: 1000px) {
-    display: none;
-  }
+ @include gb.flexBox;
+ flex-direction: column;
+ gap: 20px;
+ padding: 5px;
+ img{
+  width: 28px;
+  height: 28px;
+ }
+ span{
+  width: 25px;
+  height: 1.5px;
+  background-color: gray;
+ }
+ i{
+  font-size: 25px;
+ }
 }

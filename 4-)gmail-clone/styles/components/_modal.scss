@@ -1,0 +1,71 @@
+@use "../base/variables" as v;
+
+.modal-wrapper{
+    background-color: rgba(128,128,128,0.2);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    display: none;
+
+    &.open{
+        display: block;
+    }
+
+    .modal-inner{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: v.$mails-background;
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        height: 50%;
+        border-radius: 10px;
+        padding: 40px;
+        position: relative;
+        #close-btn{
+            position: absolute;
+            right: 40px;
+            top: 25px;
+            font-size: 20px;
+            color: red;
+            cursor: pointer;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            margin-top: 40px;
+            position: relative;
+            label{
+                margin-bottom: 10px;
+            }
+            input,
+            textarea{
+                border: 1px solid gray;
+                border-radius: 4px;
+                padding: 8px;
+                margin-bottom: 20px;
+            }
+            textarea{
+                height: 100px;
+                resize: none;
+            }
+
+            #mail-form-btn{
+                background-color: v.$create-color;
+                padding: 10px 25px;
+                font-size: 17px;
+                cursor: pointer;
+                position: absolute;
+                bottom: -50px;
+                border-radius: 10px;
+                transition: all 0.5s ease;
+                &:hover{
+                    scale: 0.9;
+                }
+            }
+        }
+    }
+}

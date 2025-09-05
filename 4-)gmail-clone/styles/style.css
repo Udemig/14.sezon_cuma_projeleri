@@ -141,11 +141,6 @@ header .header-icons .user-image {
 .left-aside span {
   font-weight: 500;
 }
-@media (max-width: 1200px) {
-  .left-aside span {
-    display: none;
-  }
-}
 .left-aside .create {
   background-color: #c2e7ff;
   padding: 15px 30px;
@@ -248,14 +243,170 @@ header .header-icons .user-image {
   align-items: center;
   gap: 10px;
 }
-
-.right-aside {
-  background-color: tomato;
+.center .mails-area .mail {
+  height: 41px;
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+  gap: 10px;
+  font-size: 16px;
+  background-color: #f2f6fc;
+  padding: 10px;
+  border-bottom: 1px solid rgb(218, 218, 218);
 }
-@media (max-width: 1000px) {
-  .right-aside {
+.center .mails-area .mail:hover {
+  box-shadow: 0 0 10px rgb(211, 211, 211);
+}
+.center .mails-area .mail:hover > .right .mail-date {
+  display: none;
+}
+.center .mails-area .mail:hover > .right .delete {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+}
+.center .mails-area .mail .left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-left: 25px;
+}
+.center .mails-area .mail .left i {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: transparent;
+  font-size: 25px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  font-size: 16px;
+}
+.center .mails-area .mail .left i:hover {
+  background-color: #eaebef;
+}
+.center .mails-area .mail .left span {
+  width: 80px;
+}
+.center .mails-area .mail .center {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 17px;
+  font-weight: 500;
+  background: transparent;
+}
+.center .mails-area .mail .center .mail-title {
+  font-weight: bold;
+}
+.center .mails-area .mail .center .mail-desc {
+  width: 100%;
+  white-space: nowrap;
+}
+@media (max-width: 768px) {
+  .center .mails-area .mail .center .mail-desc {
     display: none;
   }
+}
+.center .mails-area .mail .right {
+  display: flex;
+  align-items: center;
+  align-items: center;
+}
+.center .mails-area .mail .right .mail-date {
+  white-space: nowrap;
+  font-size: 15px;
+}
+.center .mails-area .mail .right .delete {
+  font-size: 17px;
+  cursor: pointer;
+  display: none;
+}
+
+.right-aside {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  padding: 5px;
+}
+.right-aside img {
+  width: 28px;
+  height: 28px;
+}
+.right-aside span {
+  width: 25px;
+  height: 1.5px;
+  background-color: gray;
+}
+.right-aside i {
+  font-size: 25px;
+}
+
+.modal-wrapper {
+  background-color: rgba(128, 128, 128, 0.2);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  display: none;
+}
+.modal-wrapper.open {
+  display: block;
+}
+.modal-wrapper .modal-inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 50%;
+  border-radius: 10px;
+  padding: 40px;
+  position: relative;
+}
+.modal-wrapper .modal-inner #close-btn {
+  position: absolute;
+  right: 40px;
+  top: 25px;
+  font-size: 20px;
+  color: red;
+  cursor: pointer;
+}
+.modal-wrapper .modal-inner form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  position: relative;
+}
+.modal-wrapper .modal-inner form label {
+  margin-bottom: 10px;
+}
+.modal-wrapper .modal-inner form input,
+.modal-wrapper .modal-inner form textarea {
+  border: 1px solid gray;
+  border-radius: 4px;
+  padding: 8px;
+  margin-bottom: 20px;
+}
+.modal-wrapper .modal-inner form textarea {
+  height: 100px;
+  resize: none;
+}
+.modal-wrapper .modal-inner form #mail-form-btn {
+  background-color: #c2e7ff;
+  padding: 10px 25px;
+  font-size: 17px;
+  cursor: pointer;
+  position: absolute;
+  bottom: -50px;
+  border-radius: 10px;
+  transition: all 0.5s ease;
+}
+.modal-wrapper .modal-inner form #mail-form-btn:hover {
+  scale: 0.9;
 }
 
 body {
@@ -268,8 +419,12 @@ main {
   display: grid;
   grid-template-columns: auto 5fr 0.5fr;
 }
-@media (max-width: 1000px) {
-  main {
-    grid-template-columns: auto 5fr;
-  }
+
+.hide .create span,
+.hide .left-aside-middle span {
+  display: none;
+}
+
+.bi-star-fill {
+  color: #ece852;
 }/*# sourceMappingURL=style.css.map */

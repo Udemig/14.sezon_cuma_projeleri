@@ -11,9 +11,7 @@
 
   span {
     font-weight: 500;
-    @include mx.lg {
-      display: none;
-    }
+   
   }
   // Create
   .create {

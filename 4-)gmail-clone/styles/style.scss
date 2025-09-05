@@ -6,6 +6,7 @@
 @use "./components/left-aside";
 @use "./components/center";
 @use "./components/right-aside";
+@use "./components/modal";
 
 // Google Fonts
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
@@ -21,7 +22,15 @@ main {
   display: grid;
   grid-template-columns: auto 5fr 0.5fr;
 
-  @media (max-width: 1000px) {
-    grid-template-columns: auto 5fr;
+ 
+}
+.hide{
+  .create span,
+  .left-aside-middle span{
+    display: none;
   }
+}
+
+.bi-star-fill{
+  color: #ece852;
 }

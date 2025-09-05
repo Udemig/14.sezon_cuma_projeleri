@@ -62,4 +62,71 @@
   }
 
   // Mails Area
+  .mails-area{
+    .mail{
+      height: 41px;
+      display: grid;
+      grid-template-columns: 1fr 5fr 1fr;
+      gap: 10px;
+      font-size: 16px;
+      background-color: v.$box-color;
+      padding: 10px;
+      border-bottom: 1px solid rgb(218,218,218);
+      &:hover{
+        box-shadow: 0 0 10px rgb(211, 211, 211);
+      }
+
+      &:hover > .right .mail-date{
+        display: none
+      }
+      &:hover > .right .delete{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100px;
+      }
+      .left{
+        @include gb.flexBox;
+        gap: 10px;
+        padding-left: 25px;
+        i{
+          @include gb.icon;
+          font-size: 16px;
+        }
+        span{
+          width: 80px;
+        }
+      }
+      .center{
+        @include gb.flexBox;
+        gap: 10px;
+        font-size: 17px;
+        font-weight: 500; 
+        background: transparent;
+        .mail-title{
+          font-weight: bold;
+        }
+        .mail-desc{
+          width: 100%;
+          white-space: nowrap;
+          @include mx.md{
+            display: none;
+          }
+        }
+      }
+      .right{
+        @include gb.flexBox;
+        align-items: center;
+        .mail-date{
+          white-space: nowrap;
+          font-size: 15px;
+        }
+        .delete{
+          font-size: 17px;
+          cursor: pointer;
+          display: none;
+        }
+      }
+    }
+  }
 }
