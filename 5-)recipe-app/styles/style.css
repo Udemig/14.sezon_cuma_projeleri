@@ -1,0 +1,394 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  border: none;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+button {
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+header {
+  display: grid;
+  grid-template-areas: "logo form likes";
+  background-color: #f9f5f3;
+}
+@media (max-width: 700px) {
+  header {
+    grid-template-areas: "logo likes" "form form";
+  }
+}
+header .logo {
+  grid-area: logo;
+  display: grid;
+  place-items: center;
+}
+header .logo img {
+  height: 100px;
+}
+header .search-form {
+  grid-area: form;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 700px) {
+  header .search-form {
+    margin: 30px 0;
+  }
+}
+header .search-form form {
+  background-color: white;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+header .search-form form input {
+  font-size: 14px;
+  padding: 8px 10px;
+  width: 300px;
+}
+header .search-form form input::placeholder {
+  color: #dad0cc;
+}
+header .search-form form button {
+  padding: 10px 30px;
+  border-radius: 40px;
+  background-image: linear-gradient(45deg, #fbda61 0%, #ff5acd 100%);
+  color: white;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+header .search-form form button:hover {
+  scale: 1.1;
+}
+header .likes {
+  grid-area: likes;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  font-size: 30px;
+  cursor: pointer;
+  position: relative;
+  margin-left: 60px;
+}
+header .likes i {
+  margin-right: 10px;
+}
+header .likes i:hover {
+  color: gray;
+}
+header .likes:hover > .likes-list {
+  visibility: visible;
+  opacity: 1;
+}
+header .likes .likes-list {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  overflow-x: hidden;
+  overflow-y: auto;
+  bottom: -130px;
+  right: 20px;
+  background-color: rgb(121, 121, 121);
+  min-width: 240px;
+  min-height: 140px;
+  padding: 10px;
+  border-radius: 20px;
+}
+@media (max-width: 700px) {
+  header .likes .likes-list {
+    max-width: 240px;
+    max-height: 100px;
+    bottom: -30px;
+    right: 40px;
+  }
+}
+header .likes .likes-list a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 10px;
+  border-bottom: 1px solid white;
+}
+header .likes .likes-list a img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+@media (max-width: 700px) {
+  header .likes .likes-list a img {
+    width: 30px;
+    height: 30px;
+  }
+}
+header .likes .likes-list a p {
+  font-size: 15px;
+  color: white;
+}
+@media (max-width: 700px) {
+  header .likes .likes-list a p {
+    font-size: 13px;
+  }
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+}
+.result .title {
+  padding: 10px;
+  font-size: 25px;
+  max-width: 300px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+@media (max-width: 1200px) {
+  .result .title {
+    max-width: 500px;
+  }
+}
+.result .result-link {
+  background-color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  gap: 20px;
+  transition: all 0.5s ease;
+}
+.result .result-link:hover {
+  background-color: #f9f5f3;
+  transform: translateY(-2px);
+}
+.result .result-link img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+.result .result-link .data h4 {
+  color: #fbda61;
+  max-width: 200px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+@media (max-width: 1200px) {
+  .result .result-link .data h4 {
+    max-width: 500px;
+  }
+}
+.result .result-link .data p {
+  color: gray;
+}
+
+.recipe {
+  background-color: #f9f5f3;
+  height: 100vh !important;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.recipe figure {
+  height: 300px;
+  position: relative;
+}
+.recipe figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.recipe figure h1 {
+  font-family: "Ubuntu", sans-serif;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%) skewY(-6deg);
+  white-space: nowrap;
+  background-color: #a9c9ff;
+  background-image: linear-gradient(90deg, #a9c9ff 0%, #ffbbec 100%);
+  padding: 10px 30px;
+  color: white;
+  font-weight: 600;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.53);
+}
+@media (max-width: 1200px) {
+  .recipe figure h1 {
+    font-size: 25px;
+  }
+}
+@media (max-width: 700px) {
+  .recipe figure h1 {
+    font-size: 20px;
+  }
+}
+.recipe figure .like-area {
+  display: flex;
+  justify-content: end;
+  padding: 30px;
+}
+.recipe figure .like-area i {
+  font-size: 26px;
+  padding: 5px;
+  color: pink;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+.recipe figure .like-area i:hover {
+  background-color: #bbbbbb;
+}
+.recipe .ingredients {
+  margin-top: 70px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+.recipe .ingredients ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 20px;
+  columns: 40px;
+}
+@media (max-width: 1200px) {
+  .recipe .ingredients ul {
+    grid-template-columns: 1fr;
+  }
+}
+.recipe .ingredients ul li {
+  display: flex;
+  gap: 10px;
+}
+.recipe .ingredients ul li i {
+  color: #b1cdfe;
+}
+.recipe button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  cursor: pointer;
+  gap: 10px;
+  font-weight: 600;
+  color: white;
+  background-image: linear-gradient(90deg, #a9c9ff 0%, #ffbbec 100%);
+  font-size: 15px;
+  margin: 50px auto;
+  padding: 10px;
+  transition: all 0.3s;
+}
+.recipe button i {
+  font-size: 20px;
+}
+.recipe button:hover {
+  scale: 0.95;
+}
+.recipe .directions {
+  text-align: center;
+  padding-bottom: 40px;
+}
+.recipe .directions h2 {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 30px;
+  transform: skewY(-3deg);
+  color: #ffbbec;
+  text-transform: 0 0 30px #ffbbec;
+}
+.recipe .directions p {
+  padding: 50px;
+}
+.recipe .directions p span {
+  color: #ffbbec;
+}
+.recipe .directions a {
+  border: 1px solid #a9c9ff;
+  padding: 10px 30px;
+  border-radius: 30px;
+  transition: all 0.3s;
+}
+.recipe .directions a:hover {
+  background-color: #a9c9ff;
+  color: white;
+}
+
+.basket {
+  background-color: white;
+  padding: 5px 10px;
+  overflow: auto;
+}
+.basket h2 {
+  font-family: "Ubuntu", sans-serif;
+  text-align: center;
+  color: #a9c9ff;
+  margin: 30px;
+  font-size: 30px;
+}
+.basket .button-area {
+  display: flex;
+  justify-content: end;
+}
+.basket .button-area button {
+  background-color: rgb(221, 0, 0);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.basket .button-area button:hover {
+  background-color: rgb(139, 0, 0);
+  scale: 0.9;
+}
+.basket ul li {
+  padding: 5px;
+  border-bottom: 1px solid gray;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.basket ul li i {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #fbda61;
+  background-image: linear-gradient(45deg, #fbda61 0%, #ff5acd 100%);
+  min-height: 100vh;
+}
+
+.container {
+  background-color: white;
+  max-width: 120rem;
+  margin: 4vw auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 70vh;
+  border-radius: 6px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+@media (max-width: 1200px) {
+  main {
+    grid-template-columns: 1fr !important;
+  }
+}
+@media (max-width: 500px) {
+  main {
+    max-width: 500px;
+  }
+}/*# sourceMappingURL=style.css.map */
