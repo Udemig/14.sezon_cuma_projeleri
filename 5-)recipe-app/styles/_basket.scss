@@ -1,40 +1,45 @@
-.basket{
-    background-color: white;
-    padding: 5px 10px;
-    overflow: auto;
-    h2{
-        font-family: "Ubuntu", sans-serif;
-        text-align: center;
-        color: #a9c9ff;
-        margin: 30px;
-        font-size: 30px;
-    }
-    .button-area{
-        display: flex;
-        justify-content: end;
-        button{
-            background-color: rgb(221, 0, 0);
-            color: white;
-            cursor: pointer;
-            transition: all 0.3s ;
-            &:hover{
-                background-color: rgb(139, 0, 0);
-                scale: 0.9;
-            }
-        }
-    }
+.basket {
+  background-color: white;
+  padding: 5px 10px;
+  overflow: auto;
 
-    ul{
-        li{
-            padding: 5px;
-            border-bottom: 1px solid gray;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            i{
-                font-size: 20px;
-                cursor: pointer;
-            }
-        }
+  h2 {
+    font-family: "Ubuntu", sans-serif;
+    text-align: center;
+    color: #a9c9ff;
+    margin: 30px;
+    font-size: 30px;
+  }
+
+  .button-area {
+    display: flex;
+    justify-content: end;
+
+    button {
+      display: none;
+      background: rgb(221, 0, 0);
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s scale 0.2s;
+      &:hover {
+        background-color: rgb(139, 0, 0);
+        scale: 0.9;
+      }
     }
+  }
+
+  ul {
+    li {
+      padding: 5px;
+      border-bottom: 1px solid gray;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+
+      i {
+        font-size: 20px;
+        cursor: pointer;
+      }
+    }
+  }
 }

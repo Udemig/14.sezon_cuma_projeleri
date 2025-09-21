@@ -1,125 +1,143 @@
-.recipe{
-    background-color: #f9f5f3;
-    height: 100vh !important;
-    overflow-x: hidden;
-    overflow-y: auto;
-    figure{
-        height: 300px;
-        position: relative;
-        img{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        h1{
-            font-family: "Ubuntu", sans-serif;
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translate(-50%) skewY(-6deg);
-            white-space: nowrap;
-            background-color: #a9c9ff;
-            background-image: linear-gradient(90deg, #a9c9ff 0%, #ffbbec 100%);
-            padding: 10px 30px;
-            color: white;
-            font-weight: 600;
-            text-shadow: 0 0 10px rgba(0,0,0,0.53);
-            @include laptop{
-                font-size: 25px;
-            }
-            @include tablet{
-                font-size: 20px;
-            }
-        }
-        .like-area{
-            display: flex;
-            justify-content: end;
-            padding: 30px;
-            i{
-                font-size: 26px;
-                padding: 5px;
-                color: pink;
-                cursor: pointer;
-                border-radius: 10px;
-                transition: all 0.3s;
-                &:hover{
-                    background-color: #bbbbbb;
-                }
-            }
-        }
+.recipe {
+  background-color: #f9f5f3;
+  height: 100vh !important;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  figure {
+    height: 300px;
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
-    .ingredients{
-        margin-top: 70px;
-        padding: 20px;
-        display: flex;
-        justify-content: center;
-        ul{
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            row-gap: 20px;
-            columns: 40px;
-            @include laptop{
-                grid-template-columns: 1fr;
-            }
-            li{
-                display: flex;
-                gap: 10px;
-                i{
-                    color: #b1cdfe;
-                }
-            }
-        }
+    h1 {
+      font-family: "Ubuntu", sans-serif;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%) skewY(-6deg);
+      white-space: nowrap;
+      background-color: #a9c9ff;
+      background-image: linear-gradient(90deg, #a9c9ff 0%, #ffbbec 100%);
+      padding: 10px 30px;
+      color: white;
+      font-weight: 600;
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.538);
+      @include laptop {
+        font-size: 25px;
+      }
+      @include tablet {
+        font-size: 20px;
+      }
     }
 
-    button{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 80%;
+    .like-area {
+      display: flex;
+      justify-content: end;
+      padding: 30px;
+
+      i {
+        font-size: 26px;
+        padding: 5px;
+        color: pink;
         cursor: pointer;
-        gap: 10px;
-        font-weight: 600;
-        color: white;
-        background-image: linear-gradient(90deg, #a9c9ff 0%, #ffbbec 100%);
-        font-size: 15px;
-        margin: 50px auto;
-        padding: 10px;
+        border-radius: 10px;
         transition: all 0.3s;
-        i{
-            font-size: 20px;
+        &:hover {
+          background-color: #bbbbbb;
         }
-        &:hover{
-            scale: 0.95;
+      }
+    }
+  }
+
+  .ingredients {
+    margin-top: 70px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+
+    ul {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 20px;
+      column-gap: 40px;
+      @include laptop {
+        grid-template-columns: 1fr;
+      }
+
+      li {
+        display: flex;
+        gap: 10px;
+        i {
+          color: #b1cdfe;
         }
-        
+      }
+    }
+  }
+
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    cursor: pointer;
+    gap: 10px;
+    margin-top: 10px;
+    font-weight: 600;
+    color: white;
+    background-image: linear-gradient(90deg, #a9c9ff 0%, #ffbbec 100%);
+    font-size: 15px;
+    margin: 50px auto;
+    padding: 10px;
+    transition: all 0.3s;
+    i {
+      font-size: 20px;
+      pointer-events: none;
     }
 
-    .directions{
-        text-align: center;
-        padding-bottom: 40px;
-        h2{
-            font-family: "Ubuntu", sans-serif;
-            font-size: 30px;
-            transform: skewY(-3deg);
-            color: #ffbbec;
-            text-transform: 0 0 30px #ffbbec;
-        }
-        p{
-            padding: 50px;
-            span{
-                color: #ffbbec;
-            }
-        }
-        a{
-            border: 1px solid #a9c9ff;
-            padding: 10px 30px;
-            border-radius: 30px;
-            transition: all 0.3s;
-            &:hover{
-                background-color: #a9c9ff;
-                color: white;
-            }
-        }
+    span {
+      pointer-events: none;
     }
+
+    &:hover {
+      scale: 0.95;
+    }
+  }
+
+  .directions {
+    text-align: center;
+    padding-bottom: 40px;
+
+    h2 {
+      font-family: "Ubuntu", sans-serif;
+      font-size: 30px;
+      transform: skewY(-3deg);
+      color: #ffbbec;
+      text-shadow: 0 0 30px #ffbbec;
+    }
+
+    p {
+      padding: 50px;
+
+      span {
+        color: #ffbbec;
+      }
+    }
+
+    a {
+      border: 1px solid #a9c9ff;
+      padding: 10px 30px;
+      border-radius: 30px;
+      transition: all 0.3s;
+
+      &:hover {
+        background-color: #a9c9ff;
+        color: white;
+      }
+    }
+  }
 }

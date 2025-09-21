@@ -7,6 +7,7 @@ header {
       "logo likes"
       "form form";
   }
+
   .logo {
     grid-area: logo;
     display: grid;
@@ -15,46 +16,48 @@ header {
       height: 100px;
     }
   }
+
   .search-form {
     grid-area: form;
     display: flex;
     align-items: center;
     justify-content: center;
-    @include tablet{
-        margin: 30px 0;
+    @include tablet {
+      margin: 30px 0;
     }
 
-    form{
-        background-color: white;
+    form {
+      background-color: white;
+      border-radius: 40px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      input {
+        font-size: 14px;
+        padding: 8px 10px;
+        width: 300px;
+
+        &::placeholder {
+          color: #dad0cc;
+        }
+      }
+
+      button {
+        padding: 10px 30px;
         border-radius: 40px;
-        display: flex;
-        align-items: center;
-        overflow: hidden;
-        input{
-            font-size: 14px;
-            padding: 8px 10px;
-            width: 300px;
-
-            &::placeholder{
-                color: #dad0cc;
-            }
+        background-image: linear-gradient(45deg, #fbda61 0%, #ff5acd 100%);
+        color: white;
+        cursor: pointer;
+        transition: all 0.4s ease;
+        &:hover {
+          scale: 1.1;
         }
-
-        button{
-            padding: 10px 30px;
-            border-radius: 40px;
-            background-image: linear-gradient(45deg, #fbda61 0%, #ff5acd 100%);;
-            color: white;
-            cursor: pointer;
-            transition: all 0.4s ease;
-            &:hover{
-                scale: 1.1;
-            }
-        }
+      }
     }
   }
+
   .likes {
-    grid-area: likes;
+    grid-area: likes; // grid area ne
     display: flex;
     align-items: center;
     justify-content: end;
@@ -62,63 +65,65 @@ header {
     cursor: pointer;
     position: relative;
     margin-left: 60px;
-    i{
-        margin-right: 10px;
-        &:hover{
-            color: gray;
-        }
 
-       
+    i {
+      margin-right: 10px;
+      &:hover {
+        color: gray;
+      }
     }
-     &:hover > .likes-list{
-            visibility: visible;
-            opacity: 1;
-        }
 
-    .likes-list{
-        opacity: 0;
-        visibility: hidden;
-        position: absolute;
-        overflow-x: hidden;
-        overflow-y: auto;
-        bottom: -130px;
-        right: 20px;
-        background-color: rgb(121, 121, 121);
-        min-width: 240px;
-        min-height: 140px;
-        @include tablet{
-         max-width: 240px;
-         max-height: 100px;
-         bottom: -30px;
-         right: 40px;
-        }
+    &:hover > .likes-list {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .likes-list {
+      opacity: 0;
+      visibility: hidden;
+      position: absolute;
+      overflow-x: hidden;
+      overflow-y: auto;
+      bottom: -130px;
+      right: 20px;
+      background-color: rgb(121, 121, 121);
+      min-width: 240px;
+      min-height: 140px;
+      @include tablet {
+        max-width: 240px;
+        max-height: 100px;
+        bottom: -30px;
+        right: 40px;
+      }
+      padding: 10px;
+      border-radius: 20px;
+
+      a {
+        display: flex;
+        align-items: center;
+        gap: 5px;
         padding: 10px;
-        border-radius: 20px;
-        a{
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            padding: 10px;
-            border-bottom: 1px solid white;
+        border-bottom: 1px solid white;
 
-            img{
-                width: 50px;
-                height: 50px;
-                border-radius: 50%;
-                @include tablet{
-                    width: 30px;
-                    height: 30px;
-                }
-            }
-
-            p{
-                font-size: 15px;
-                color: white;
-                @include tablet{
-                    font-size: 13px;
-                }
-            }
+        img {
+          @include tablet {
+            width: 30px;
+            height: 30px;
+          }
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
         }
+
+        p {
+          @include tablet {
+            font-size: 13px;
+          }
+
+          font-size: 15px;
+          color: white;
+        }
+      }
     }
   }
 }

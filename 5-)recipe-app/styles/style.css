@@ -143,11 +143,11 @@ header .likes .likes-list a p {
   }
 }
 
-.result {
+.results {
   display: flex;
   flex-direction: column;
 }
-.result .title {
+.results .title {
   padding: 10px;
   font-size: 25px;
   max-width: 300px;
@@ -156,11 +156,11 @@ header .likes .likes-list a p {
   text-overflow: ellipsis;
 }
 @media (max-width: 1200px) {
-  .result .title {
+  .results .title {
     max-width: 500px;
   }
 }
-.result .result-link {
+.results .result-link {
   background-color: white;
   cursor: pointer;
   display: flex;
@@ -169,16 +169,16 @@ header .likes .likes-list a p {
   gap: 20px;
   transition: all 0.5s ease;
 }
-.result .result-link:hover {
+.results .result-link:hover {
   background-color: #f9f5f3;
   transform: translateY(-2px);
 }
-.result .result-link img {
+.results .result-link img {
   width: 60px;
   height: 60px;
   border-radius: 50%;
 }
-.result .result-link .data h4 {
+.results .result-link .data h4 {
   color: #fbda61;
   max-width: 200px;
   overflow: hidden;
@@ -186,11 +186,11 @@ header .likes .likes-list a p {
   text-overflow: ellipsis;
 }
 @media (max-width: 1200px) {
-  .result .result-link .data h4 {
+  .results .result-link .data h4 {
     max-width: 500px;
   }
 }
-.result .result-link .data p {
+.results .result-link .data p {
   color: gray;
 }
 
@@ -221,7 +221,7 @@ header .likes .likes-list a p {
   padding: 10px 30px;
   color: white;
   font-weight: 600;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.53);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.538);
 }
 @media (max-width: 1200px) {
   .recipe figure h1 {
@@ -259,7 +259,7 @@ header .likes .likes-list a p {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   row-gap: 20px;
-  columns: 40px;
+  column-gap: 40px;
 }
 @media (max-width: 1200px) {
   .recipe .ingredients ul {
@@ -280,6 +280,7 @@ header .likes .likes-list a p {
   width: 80%;
   cursor: pointer;
   gap: 10px;
+  margin-top: 10px;
   font-weight: 600;
   color: white;
   background-image: linear-gradient(90deg, #a9c9ff 0%, #ffbbec 100%);
@@ -290,6 +291,10 @@ header .likes .likes-list a p {
 }
 .recipe button i {
   font-size: 20px;
+  pointer-events: none;
+}
+.recipe button span {
+  pointer-events: none;
 }
 .recipe button:hover {
   scale: 0.95;
@@ -303,7 +308,7 @@ header .likes .likes-list a p {
   font-size: 30px;
   transform: skewY(-3deg);
   color: #ffbbec;
-  text-transform: 0 0 30px #ffbbec;
+  text-shadow: 0 0 30px #ffbbec;
 }
 .recipe .directions p {
   padding: 50px;
@@ -339,10 +344,11 @@ header .likes .likes-list a p {
   justify-content: end;
 }
 .basket .button-area button {
-  background-color: rgb(221, 0, 0);
+  display: none;
+  background: rgb(221, 0, 0);
   color: white;
   cursor: pointer;
-  transition: all 0.3s;
+  transition: background 0.3s scale 0.2s;
 }
 .basket .button-area button:hover {
   background-color: rgb(139, 0, 0);
@@ -375,20 +381,26 @@ body {
   flex-direction: column;
   min-height: 70vh;
   border-radius: 6px;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.502);
 }
 
 main {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
+  height: 100vh !important;
 }
 @media (max-width: 1200px) {
   main {
     grid-template-columns: 1fr !important;
   }
 }
-@media (max-width: 500px) {
-  main {
-    max-width: 500px;
-  }
+
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 80px auto;
+}
+.loader img {
+  width: 250px;
 }/*# sourceMappingURL=style.css.map */

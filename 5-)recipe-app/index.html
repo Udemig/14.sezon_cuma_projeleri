@@ -3,106 +3,98 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <!-- Css Link -->
-    <link rel="stylesheet" href="styles/style.css" />
-
-    <!-- BS Icon Cdn -->
+    <title>Recipe App</title>
+    <!-- * Css Link -->
+    <link rel="stylesheet" href="./styles/style.css" />
+    <!-- * Bs Icons Cdn -->
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <!-- * Toastify Css -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
     />
   </head>
   <body>
+    <!-- * Container -->
     <div class="container">
+      <!-- * Header -->
       <header>
+        <!-- Logo -->
         <div class="logo">
-          <img width="100px" src="./assets/food-logo.png" alt="" />
+          <img src="./assets/food-logo.png" alt="logo" />
         </div>
+        <!-- Form -->
         <div class="search-form">
           <form>
-            <input type="text" placeholder="Ürün adı giriniz..." />
+            <input type="search" placeholder="Ürün adı giriniz ..." />
             <button>
               <i class="bi bi-search"></i>
               <span>Ara</span>
             </button>
           </form>
         </div>
-
+        <!-- Likes -->
         <div class="likes">
           <i class="bi bi-bookmark-heart-fill"></i>
 
           <div class="likes-list">
-            <a href="#">
+            <!-- <a href="#">
               <img
-                width="32px"
-                src="https://forkify-api.herokuapp.com/images/19321150c4.jpg"
-                alt=""
-              />
-              <p>Chicken Pizza</p>
-            </a>
-
-            <a href="#">
-              <img
-                width="32px"
-                src="https://forkify-api.herokuapp.com/images/19321150c4.jpg"
-                alt=""
+                src="http://forkify-api.herokuapp.com/images/4024225151_5f477f16caabf9.jpg"
+                width="50"
+                alt="list-image"
               />
               <p>Chicken Parmigiana</p>
             </a>
+            <a href="#">
+              <img
+                src="http://forkify-api.herokuapp.com/images/4024225151_5f477f16caabf9.jpg"
+                width="50"
+                alt="list-image"
+              />
+              <p>Chicken Parmigiana</p>
+            </a>
+            <a href="#">
+              <img
+                src="http://forkify-api.herokuapp.com/images/4024225151_5f477f16caabf9.jpg"
+                width="50"
+                alt="list-image"
+              />
+              <p>Chicken Parmigiana</p>
+            </a> -->
           </div>
         </div>
       </header>
-
+      <!-- * Main -->
       <main>
-        <div class="result">
-          <h1 class="title">Ürün aratınız</h1>
-          <a class="result-link" href="#">
+        <!-- *  Results -->
+        <div class="results">
+          <h1 class="title">Ürün aratınız ...</h1>
+           <!-- <a href='#${recipe.recipe_id}' class="result-link">
             <img
-              width="52px"
-              src="https://forkify-api.herokuapp.com/images/19321150c4.jpg"
-              alt=""
+              src="${recipe.image_url}"
+              alt="result-link-image"
             />
-
             <div class="data">
-              <h4>Best Pizza Dough Ever</h4>
-              <p>101 Cookbooks</p>
+              <h4>${recipe.title}</h4>
+              <p>${recipe.publisher}</p>
             </div>
-          </a>
-          <a class="result-link" href="#">
-            <img
-              width="52px"
-              src="https://forkify-api.herokuapp.com/images/19321150c4.jpg"
-              alt=""
-            />
-
-            <div class="data">
-              <h4>Best Pizza Dough Ever</h4>
-              <p>101 Cookbooks</p>
-            </div>
-          </a>
-          <a class="result-link" href="#">
-            <img
-              width="52px"
-              src="https://forkify-api.herokuapp.com/images/19321150c4.jpg"
-              alt=""
-            />
-
-            <div class="data">
-              <h4>Best Pizza Dough Ever</h4>
-              <p>101 Cookbooks</p>
-            </div>
-          </a>
+          </a>`; -->
         </div>
-
+        <!-- * Recipe -->
         <div class="recipe">
-          <figure>
+          <!-- <figure>
             <img
-              src="https://forkify-api.herokuapp.com/images/19321150c4.jpg"
-              alt=""
+              src="http://forkify-api.herokuapp.com/images/19321150c4.jpg"
+              alt="recipe-image"
             />
 
-            <h1>Best Pizza Dough Ever</h1>
+            <h1>Slow Cooker Chicken Tortilla Soup</h1>
 
             <div class="like-area">
               <i class="bi bi-heart"></i>
@@ -113,48 +105,61 @@
             <ul>
               <li>
                 <i class="bi bi-check-circle"></i>
-                <span>
-                  4 1/2 cups (20.25 ounces) unbleached high-gluten, bread, or
-                  all-purpose flour, chilled
-                </span>
+                <span> 1 pound shredded, cooked chicken </span>
               </li>
               <li>
                 <i class="bi bi-check-circle"></i>
-                <span> 1 3/4 (.44 ounce) teaspoons salt </span>
+                <span> 1 pound shredded, cooked chicken </span>
               </li>
               <li>
                 <i class="bi bi-check-circle"></i>
-                <span> 1 teaspoon (.11 ounce) instant yeast </span>
+                <span> 1 pound shredded, cooked chicken </span>
               </li>
               <li>
                 <i class="bi bi-check-circle"></i>
-                <span> 1/4 cup (2 ounces) olive oil (optional) </span>
+                <span> 1 pound shredded, cooked chicken </span>
               </li>
               <li>
                 <i class="bi bi-check-circle"></i>
-                <span> 1 3/4 cups (14 ounces) water, ice cold (40F) </span>
+                <span> 1 pound shredded, cooked chicken </span>
               </li>
               <li>
                 <i class="bi bi-check-circle"></i>
-                <span> Semolina flour OR cornmeal for dusting </span>
+                <span> 1 pound shredded, cooked chicken </span>
+              </li>
+              <li>
+                <i class="bi bi-check-circle"></i>
+                <span> 1 pound shredded, cooked chicken </span>
+              </li>
+              <li>
+                <i class="bi bi-check-circle"></i>
+                <span> 1 pound shredded, cooked chicken </span>
+              </li>
+              <li>
+                <i class="bi bi-check-circle"></i>
+                <span> 1 pound shredded, cooked chicken </span>
               </li>
             </ul>
           </div>
+
           <button id="add-to-basket">
             <i class="bi bi-cart"></i>
             <span>Alışveriş Sepetine Ekle</span>
           </button>
+
           <div class="directions">
-            <h2>Nasıl Pişirilir</h2>
+            <h2>Nasıl Pişirilir?</h2>
             <p>
-              Bu tarif dikkatlice <span>101 Cookbooks</span> tarafından hazırlanmış ve test
-              edilmiştir. Diğer detaylara onların websitesi üzerinden
-              erişebilirsiniz.
+              Bu tarif dikkatlice <span>All Recipes</span> tarafından
+              hazırlanmış ve test edilmiştir. Diğer detaylara onların websitesi
+              üzerinden erişebilirsiniz.
             </p>
+
             <a href="#" target="_blank">Yönerge</a>
-          </div>
+          </div> -->
         </div>
 
+        <!-- * Basket -->
         <div class="basket">
           <h2>Sepet</h2>
 
@@ -166,35 +171,49 @@
           </div>
 
           <ul>
-            <li>
+            <!-- <li>
               <i class="bi bi-x"></i>
-              <span>ounces cream cheese, room temperature</span>
+              <span>Sepet Elemanı</span>
             </li>
             <li>
               <i class="bi bi-x"></i>
-              <span>1/4 cup sour cream</span>
+              <span>Sepet Elemanı</span>
             </li>
             <li>
               <i class="bi bi-x"></i>
-              <span>ounces cream cheese, room temperature</span>
+              <span>Sepet Elemanı</span>
             </li>
             <li>
               <i class="bi bi-x"></i>
-              <span>1 teaspoon (.11 ounce) instant yeast</span>
+              <span>Sepet Elemanı</span>
             </li>
             <li>
               <i class="bi bi-x"></i>
-              <span>1/4 cup (2 ounces) olive oil (optional)</span>
+              <span>Sepet Elemanı</span>
             </li>
             <li>
               <i class="bi bi-x"></i>
-              <span>Semolina flour OR cornmeal for dusting</span>
-            </li>
+              <span>Sepet Elemanı</span>
+            </li> -->
           </ul>
         </div>
       </main>
     </div>
+    <!-- * Js Connection -->
+    <script src="./js/main.js" type="module"></script>
 
-    <script src="./js/main.js"></script>
+    <!-- * uuid Js -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.2.0/uuid.min.js"
+      integrity="sha512-X0CJvcClD8EXFn5Oq8BD5lIsznKDfxb0Sf9Wr8MCCTyAEWaAAxr0Jvm3qyofsmN7eSHMZ0PPQGjVKroLAfexrA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- * Toastify -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
   </body>
 </html>

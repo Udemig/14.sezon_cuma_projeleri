@@ -1,35 +1,51 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 
+// * Scss Imports
 @import "./base/reset";
 @import "./base/mixin";
 @import "./header";
-@import "./result";
+@import "./results";
 @import "./recipe";
 @import "./basket";
 
-body{
-    font-family: "Poppins", sans-serif;
-    background-color: #fbda61;
-    background-image: linear-gradient(45deg, #fbda61 0%, #ff5acd 100%);
-    min-height: 100vh;
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #fbda61;
+  background-image: linear-gradient(45deg, #fbda61 0%, #ff5acd 100%);
+  min-height: 100vh;
 }
-.container{
-    background-color: white;
-    max-width: 120rem;
-    margin: 4vw auto;
-    display: flex;
-    flex-direction: column;
-    min-height: 70vh;
-    border-radius: 6px;
-    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+
+.container {
+  background-color: white;
+  max-width: 120rem;
+  margin: 4vw auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 70vh;
+  border-radius: 6px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.502);
 }
-main{
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    @include laptop{
-        grid-template-columns: 1fr !important;
-    }
-    @include mobile{
-        max-width: 500px;
-    }
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  height: 100vh !important;
+
+  @include laptop {
+    grid-template-columns: 1fr !important;
+  }
+
+  @mixin mobile {
+    max-width: 500px;
+  }
+}
+
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 80px auto;
+  img {
+    width: 250px;
+  }
 }
