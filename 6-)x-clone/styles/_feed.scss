@@ -1,0 +1,369 @@
+.feed-page {
+  background-color: black;
+  color: white;
+  min-height: 100vh;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 600px 1fr;
+
+  .left-aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+    min-height: 100vh;
+    margin-top: 20px;
+    padding: 10px;
+    nav {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      img {
+        width: 80px;
+        @include tablet {
+          width: 50px;
+        }
+      }
+      @include tablet {
+        align-items: center;
+      }
+      span {
+        @include tablet {
+          display: none;
+        }
+      }
+      a {
+        color: white;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 20px 10px;
+        border-radius: 6px;
+        font-size: 20px;
+        transition: all 0.5s ease;
+        &:hover {
+          background-color: rgb(50, 50, 50);
+        }
+        i {
+          font-size: 25px;
+        }
+      }
+      button {
+        background-color: #1ea1f2;
+        color: white;
+        padding: 10px;
+        font-weight: bold;
+        border-radius: 5px;
+        font-size: 15px;
+        cursor: pointer;
+        transition: all 0.5s ease;
+        &:hover {
+          background-color: rgba(0, 97, 161, 0.5);
+        }
+        @include tablet {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          i {
+            font-size: 25px;
+          }
+        }
+      }
+    }
+
+    .user-info {
+      display: flex;
+      padding: 20px 0;
+      align-items: center;
+      gap: 25px;
+      @include laptop {
+        flex-direction: column;
+      }
+      img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+      }
+      p {
+        white-space: nowrap;
+        font-size: 18px;
+        @include tablet {
+          display: none;
+        }
+      }
+      button {
+        background-color: gray;
+        padding: 10px;
+        border-radius: 50%;
+        color: white;
+        font-size: 20px;
+      }
+    }
+  }
+
+  main {
+    border: 1px solid rgb(50, 50, 50);
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    #title {
+      font-size: 20px;
+      padding: 20px;
+      font-weight: bold;
+      border-bottom: 1px solid rgb(50, 50, 50);
+    }
+
+    form {
+      display: flex;
+      padding: 10px;
+      gap: 10px;
+      border-bottom: 1px solid rgb(50, 50, 50);
+      img {
+        width: 50px;
+        height: 50px;
+      }
+      div {
+        width: 100%;
+        input {
+          width: 100%;
+          background-color: transparent;
+          font-size: 20px;
+          padding: 10px 20px;
+        }
+        .btn-wrapper {
+          display: flex;
+          justify-content: end;
+          button {
+            background-color: #0e619d;
+            padding: 10px;
+            border-radius: 60px;
+            font-size: 15px;
+            color: #fff;
+            cursor: pointer;
+            transition: all 0.5s ease;
+            &:hover {
+              background-color: rgba(0, 97, 161, 0.5);
+            }
+          }
+        }
+      }
+    }
+
+    .tweets-area {
+      display: flex;
+      flex-direction: column;
+
+      .tweet {
+        padding: 10px 0;
+        border-bottom: 1px solid rgb(50, 50, 50);
+
+        .user {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 10px 40px;
+          cursor: pointer;
+          .tweet-user-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            color: white;
+
+            img {
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+            }
+            h4 {
+              font-size: 15px;
+              white-space: nowrap;
+            }
+            a {
+              color: gray;
+            }
+          }
+          .tweets-more {
+            border-radius: 50%;
+            i {
+              width: 100%;
+              padding: 10px;
+            }
+            &:hover {
+              background-color: #051723;
+            }
+          }
+        }
+
+        .tweet-content{
+            padding: 30px !important;
+            width: 100%;
+
+            @include sm {
+                width: 85% !important;
+            }
+            img,
+            video{
+                width: 100%;
+                max-height: 500px;
+                border-radius: 10px;
+                object-fit: cover;
+                margin: 10px;
+            }
+        }
+        .tweet-info{
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            button{
+                background-color: transparent;
+                color: rgb(136, 136, 136);
+                font-size: 15px;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                padding: 10px;
+                border-radius: 50%;
+
+                &:hover {
+                    background-color: #051723;
+                }
+               &:hover span{
+                color: #09578d;
+               }
+                
+            }
+        }
+      }
+    }
+  }
+  .right-aside{
+    padding: 20px;
+    @include tablet{
+        display: none;
+    }
+    .right-search{
+        display: flex;
+        border: 1px solid rgb(43, 43, 43);
+        padding: 8px 12px;
+        border-radius: 60px;
+        background-color: transparent;
+        gap: 10px;
+        width: 50%;
+        margin-bottom: 20px;
+        input{
+            background: transparent;
+            
+        }
+        i{
+            color: gray;
+        }
+    }
+    .right-premium{
+        width: 50%;
+        border: 1px solid rgb(43, 43, 43);
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        h4{
+            margin: 10px 0;
+            font-size: 20px;
+            font-weight: 600;
+        }
+        p{
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        button{
+            padding: 6px 16px;
+            background-color: #1ea1f2;
+            border-radius: 60px;
+            color: white;
+            font-size: 15px;
+            margin: 10px 0;
+            font-weight: 500;
+        }
+    }
+
+    .right-info{
+        border: 1px solid rgb(43, 43, 43);
+        width: 50%;
+        border-radius: 10px;
+        padding: 10px;
+        margin-bottom: 20px;
+        h4{
+            font-size: 20px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        div{
+            margin-bottom: 20px;
+            .right-info-desc{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 12px;
+            color: rgba(235, 233, 233, 0.5);
+        }
+        h5{
+            font-size: 14px;
+        }
+        .right-tweet{
+            font-size: 10px;
+            font-weight: 300;
+            color: rgba(235, 233, 233, 0.5);
+        }
+        }
+    }
+
+    .right-follow{
+        border: 1px solid rgb(43, 43, 43);
+        width: 50%;
+        border-radius: 10px;
+        padding: 10px;
+        h4{
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        .follow-wrapper{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            .follow-user{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .user-detail{
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    img{
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                    }
+                    h5{
+                        font-size: 14px;
+                        font-weight: 400;
+                    }
+                    p{
+                        font-size: 12px;
+                        color: rgb(153, 153, 153);
+                    }
+                }
+                button{
+                    padding: 5px 12px;
+                    border-radius: 60px;
+                    font-weight: bold;
+                    font-size: 14px;
+                }
+            }
+            a{
+                color: #0e619d;
+                font-size: 15px;
+            }
+        }
+    }
+  }
+}
